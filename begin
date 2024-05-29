@@ -16,3 +16,13 @@ Linux chile.cs.unh.edu 6.8.10-200.fc39.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May 17 
 
 # Just for me --> thoughts?!
 https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-addomain?view=windowsserver2022-ps
+
+
+
+https://www.server-world.info/en/note?os=Fedora_39&p=kvm&f=2
+
+# Download mirrors for Fedora 39
+https://www.server-world.info/en/note?os=Fedora_39&p=download
+
+Create Fedora VM, that is my ultimate goal:
+- More specifically an http boot server for new cluster machines.
