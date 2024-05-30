@@ -33,4 +33,31 @@ So, I am going to continue on just doctoring the script HOPING that fedora addre
 
 ###
 
+DHCP Server Configuration for HTTP:
 
+....
+
+if option arch = 00:07 {
+# x64 UEFI
+filename "uefi/shim64.efi";
+next-server 192.168.1.2;
+} else if option arch = 00:0b {
+# aarch64 UEFI
+filename "uefi/shimaa64.efi";
+server-name "192.168.1.2";
+} else if option arch = 00:13 {
+# aarch64 UEFI HTTP
+option vendor-class-identifier "HTTPClient";
+filename "http://download.fedoraproject.org/pub/fedora/linux/releases/36/Server/aarch64/os/images/boot.iso";
+} else if option arch = 00:10 {
+# x64 UEFI HTTP
+option vendor-class-identifier "HTTPClient";
+filename "http://download.fedoraproject.org/pub/fedora/linux/releases/36/Server/x86_64/os/images/boot.iso";
+} else {
+filename "pxelinux.0";
+next-server 192.168.1.2;
+}
+
+...
+
+I think that just needs to be added into the dhcpd.conf file. However, Im going to have to change the server ip address to be the pxe server I created.
