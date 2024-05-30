@@ -37,6 +37,12 @@ PING 10.0.2.15 (10.0.2.15) 56(84) bytes of data.
 I didnt however check and make sure there was no firewall running on that Fedora 39 vm however,
 Lets see:
 
-  
+5/29/2024
+9:23pm
+###
+Ran commands located here to enable firewall
+###
+
+https://www.server-world.info/en/note?os=Fedora_39&p=dhcp&f=1
 
 
