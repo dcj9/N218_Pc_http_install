@@ -1,4 +1,5 @@
-*https://kb.isc.org/docs/isc-dhcp-44-manual-pages-dhcpd*
+# Create PXE Fedora 39 Server VM for N218 Clusters
+
 
 5/29/2024
 
@@ -16,12 +17,6 @@ enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 Linux chile.cs.unh.edu 6.8.10-200.fc39.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May 17 21:20:15 UTC 2024 x86_64 GNU/Linux
 
-*Just for me --> thoughts?!*
-- https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-addomain?view=windowsserver2022-ps
-- https://www.server-world.info/en/note?os=Fedora_39&p=kvm&f=2
-
 # *Download mirrors for Fedora 39*
 https://www.server-world.info/en/note?os=Fedora_39&p=download
 
-Create Fedora VM, that is my ultimate goal:
-- More specifically an http boot server for new cluster machines.
