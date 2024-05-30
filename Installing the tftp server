@@ -1,1 +1,11 @@
+Installing the tftp server
+
+
+    # dnf install tftp-server
+
+    Start and enable the tftp socket. systemd will automatically start the tftpd service when required.
+
+    # systemctl start tftp.socket
+    # systemctl enable tftp.socket
+
 
