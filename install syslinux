@@ -1,1 +1,36 @@
 https://docs.stg.fedoraproject.org/en-US/fedora-server/installation/network-based/
+
+Configuring the PXE boot environment
+Providing and configuring bootloaders for PXE clients
+Getting the bootloader files
+
+    Get the syslinux bootloader for BIOS clients.
+
+        Install the syslinux package.
+
+        # dnf install syslinux
+
+        Create a directory for the bootloader files, and make them available there.
+
+        # mkdir -p /var/lib/tftpboot/pxelinux.cfg
+        # cp /usr/share/syslinux/{pxelinux.0,menu.c32,vesamenu.c32,ldlinux.c32,libcom32.c32,libutil.c32} /var/lib/tftpboot/
+
+    Get the bootloader files for UEFI systems
+
+        Install the shim-x64 and grub2-efi-x64 packages. If your server is a BIOS system, you must install the packages to a temporary install root. Installing them directly on a BIOS machine will attempt to configure the system for UEFI booting and cause problems.
+
+        # dnf install shim-x64 grub2-efi-x64 --installroot=/tmp/fedora --releasever 36
+
+        Create a directory for the bootloader files, and make them available there.
+
+        # mkdir -p /var/lib/tftpboot/uefi
+        # cp /tmp/fedora/boot/efi/EFI/fedora/{shimx64.efi,grubx64.efi} /var/lib/tftpboot/uefi/
+
+###
+
+All of this worked just replacing "36" with "39"
+So, I am going to continue on just doctoring the script HOPING that fedora addresses are accurate..
+
+###
+
+
