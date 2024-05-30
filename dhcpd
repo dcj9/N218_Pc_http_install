@@ -1,3 +1,4 @@
+- https://docs.stg.fedoraproject.org/en-US/fedora-server/administration/dnsmasq/
 ### 
   This may be needed because of how I am trying to create the dhcpd service.
   From my understanding when I am setting up "DHCP Server Configuration for HTTP"
@@ -16,6 +17,8 @@ option routers 192.168.1.1;
 
 }
 
+###  
+
 However, I get the following output from the server
   
 Fedora Linux 39 (Server Edition)
@@ -23,7 +26,7 @@ Kernel 6.5.6-300.fc39.x86_64 (tty1)
 
 Web console: https://localhost:9090/ or https://10.0.2.15:9090/
 
-I cannot connect to this site from chile.
+- I cannot connect to this site from chile.
 
 csmone@chile:~$ ping 10.0.2.15
 PING 10.0.2.15 (10.0.2.15) 56(84) bytes of data.
@@ -33,6 +36,7 @@ PING 10.0.2.15 (10.0.2.15) 56(84) bytes of data.
 
 I didnt however check and make sure there was no firewall running on that Fedora 39 vm however,
 Lets see:
+
   
-###  
-- https://docs.stg.fedoraproject.org/en-US/fedora-server/administration/dnsmasq/
+
+
