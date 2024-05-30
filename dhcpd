@@ -43,6 +43,25 @@ Lets see:
 Ran commands located here to enable firewall
 ###
 
+I did not have an interface defined to listen on. Derp derp:
+changed the following at /etc/dhcp/dhcpd.conf
+
+subnet 10.0.0.0 netmask 255.255.255.0 {
+ADDED --> interface enp0s3;
+#specify range of lease ip addresses
+range dynamic-bootp 10.0.0.200 10.0.0.254;
+#specify broadcast
+option broadcast-address 10.0.0.255;
+#specify gateway;
+option routers 10.0.0.1;
+
+}
+
+authoritative;
+default-lease-time 600;
+max-lease-time 7200;
+
+--From:
 https://www.server-world.info/en/note?os=Fedora_39&p=dhcp&f=1
 
 
