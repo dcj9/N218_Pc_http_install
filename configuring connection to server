@@ -1,0 +1,46 @@
+# Connecting CL5 to the Hub located between chile and the switch on the wall.
+
+csmone@chile:~$ ifconfig -a
+enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 132.177.5.102  netmask 255.255.252.0  broadcast 132.177.7.255
+        inet6 2606:4100:38c0:4::5:102  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::83b9:d6d9:98d8:86cb  prefixlen 64  scopeid 0x20<link>
+        ether b0:4f:13:14:4d:dd  txqueuelen 1000  (Ethernet)
+        RX packets 355589  bytes 358226181 (341.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 42448  bytes 4321740 (4.1 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  memory 0x72280000-722a0000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 3618  bytes 447721 (437.2 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3618  bytes 447721 (437.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+# On the PXE serve
+
+[root@localhost:~]
+        enp0s3: 
+        inet 10.0.2.15 netmask 255.255.255.255.0  broadcast 10.0.2.255 <-- But right off. I can see? well wait Ill check the config file to see exactly what that is set to for the server.
+        inet6 fe80:a00:27ff:f2c8:8c52 prefixlen 64 scopeid 0x20<link>
+
+        lo:
+        inet 127.0.0.1 netmask 255.0.0.0
+        inet6 ::1 prefixlen 128 scopeid 0x10<host>
+
+
+csmone@chile:~$ arp -a
+caracas.cs.unh.edu (132.177.5.101) at e0:4f:43:e2:57:74 [ether] on enp0s31f6
+lava.cs.unh.edu (132.177.4.30) at 48:4d:7e:ca:bc:f7 [ether] on enp0s31f6
+agate.cs.unh.edu (132.177.4.36) at 70:b5:e8:ec:a6:2c [ether] on enp0s31f6
+csunhrouter.cs.unh.edu (132.177.4.4) at 34:e5:ec:b7:d0:45 [ether] on enp0s31f6 
+
+[root@localhost:~] arp -a
+_gateway (10.2.2.2) at 52:54:00:12:35:02 [ether] on enp0s3
+? (10.0.2.3) at 52:54:00:12:35:03 [ether] on enp0s3
+
+
