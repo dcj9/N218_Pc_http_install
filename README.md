@@ -1,5 +1,7 @@
 # Create PXE Fedora 39 Server VM for N218 Clusters
 
+- _https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Network_based_Installations/_
+
 #updated 6/14/2024
 5/29/2024
 
@@ -33,5 +35,5 @@ Linux chile.cs.unh.edu 6.8.11-200.fc39.x86_64 #1 SMP PREEMPT_DYNAMIC Sun May 26 
 
 
 # *Download mirrors for Fedora 39*
-https://www.server-world.info/en/note?os=Fedora_39&p=download
+_https://www.server-world.info/en/note?os=Fedora_39&p=download_
 
