@@ -1,10 +1,20 @@
 Misc:
 
+# 6/14/2024
+- https://www.techtarget.com/searchnetworking/definition/DHCP#:~:text=DHCP%20(Dynamic%20Host%20Configuration%20Protocol)%20is%20a%20network%20management%20protocol,it%20can%20communicate%20using%20IP.
+- https://superuser.com/questions/311019/display-list-of-computers-on-a-lan-in-linux
+- https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+- https://stackoverflow.com/questions/9326438/dnsmasq-serve-different-ip-addresses-based-on-interface-used
+
+The issue I think I am going to run into is I am only using one device and trying to use dnsmasq I think... more than once? 
+
+
 # 6/12/2024
-https://www.digitalocean.com/community/tutorials/how-to-partition-and-format-storage-devices-in-linux --> CL5 wont boot after running commands on that site. figure it out 
+- https://www.digitalocean.com/community/tutorials/how-to-partition-and-format-storage-devices-in-linux --> CL5 wont boot after running commands on that site. figure it out 
 
 # 6/6/2024
-https://jfearn.fedorapeople.org/fdocs/en-US/Fedora/20/html/Installation_Guide/sn-pxe-server-manual.html
+- https://jfearn.fedorapeople.org/fdocs/en-US/Fedora/20/html/Installation_Guide/sn-pxe-server-manual.html
+
 Holy shit there is an actual learning page for fedora, I love you fuckers!
 
 
