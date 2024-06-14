@@ -1,2 +1,51 @@
 # https://docs.stg.fedoraproject.org/en-US/fedora-server/administration/dnsmasq/
 
+
+https://superuser.com/questions/311019/display-list-of-computers-on-a-lan-in-linux
+
+So this is bringing to me find out exactly which pcs are connected to this switch.
+
+This switch shouldnt have anything to it. But regardless. I should be to somehow "see" that switch in the layout of the network. My question is how. Why did this question never come up in any of my classes?
+
+Now im guessing because I dont fully understand network routing.
+
+Heres what im looking at
+
+inet 10.0.2.15 netmask 255.255.255.0 broacast 10.0.2.255 <-- I set that in the dhcpd.conf, I do not know if that is correct to do?
+
+not really worried about the other info
+but from what im reading on this site. 
+
+if I take my broadcast 10.0.2.255, I "THINK" that means I have to the range of 10.0.2.0 , this is all a guess mind you. 
+
+so when i looked at the example on the above page and used some of the documentation I THINK
+
+running:
+
+sudo nmap -sP 10.0.2.0/24
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-14 14:24 CDT
+Nmap scan report for _gateway ( 10.0.2.2 )
+host is up (0.00022s Latency ) 
+MAC address: 52:54:00:12:35:02 (QEMU virtual NIC)
+nmap scan report for 10.0.2.3
+...
+...
+...
+...
+Host is up.
+Nmap done: 256 IP address ( 4 hosts up ) scanned in 3.16 seconds.
+
+wtf does that all mean?
+
+oddly
+when I run 
+csmone@chile:~$ arp -a
+psoffice.cs.unh.edu (132.177.4.14) at 48:0f:cf:cc:db:1a [ether] on enp0s31f6
+caracas.cs.unh.edu (132.177.5.101) at e0:4f:43:e2:57:74 [ether] on enp0s31f6
+lava.cs.unh.edu (132.177.4.30) at 48:4d:7e:ca:bc:f7 [ether] on enp0s31f6
+agate.cs.unh.edu (132.177.4.36) at 70:b5:e8:ec:a6:2c [ether] on enp0s31f6
+csunhrouter.cs.unh.edu (132.177.4.4) at 34:e5:ec:b7:d0:45 [ether] on enp0s31f6
+
+nope thats 5... interesting. 
+
+
