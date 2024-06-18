@@ -1,5 +1,6 @@
 Misc:
 # 6/18/2024
+- https://www.redhat.com/sysadmin/arp-versus-ip
 - https://www.redhat.com/sysadmin/iptables --> changed ip tables on chile :
 
       sudo iptables -I INPUT -s 132.177.0.0/20 -p tcp --dport 69 -j ACCEPT
