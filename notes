@@ -1,4 +1,34 @@
 Misc:
+# 6/18/2024
+- https://www.redhat.com/sysadmin/iptables --> changed ip tables on chile :
+
+      sudo iptables -I INPUT -s 132.177.0.0/20 -p tcp --dport 69 -j ACCEPT
+
+csmone@chile:~$ sudo iptables -L --line-numbers -n -v
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 ACCEPT     6    --  *      *       132.177.0.0/20       0.0.0.0/0            tcp dpt:69
+2    24601   21M ACCEPT     0    --  *      *       0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+3        1   111 ACCEPT     1    --  *      *       0.0.0.0/0            0.0.0.0/0           
+4     5635  443K ACCEPT     0    --  lo     *       0.0.0.0/0            0.0.0.0/0           
+5        0     0 ACCEPT     6    --  *      *       132.177.4.0/24       0.0.0.0/0            state NEW tcp
+6        1    64 ACCEPT     6    --  *      *       132.177.5.0/24       0.0.0.0/0            state NEW tcp
+7        0     0 ACCEPT     6    --  *      *       132.177.0.0/20       0.0.0.0/0            state NEW tcp
+8     5003 1195K ACCEPT     17   --  *      *       132.177.4.0/22       0.0.0.0/0           
+9        0     0 ACCEPT     6    --  *      *       132.177.0.0/20       0.0.0.0/0            state NEW tcp dpt:22
+10       0     0 DROP       6    --  *      *       0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
+11       0     0 DROP       6    --  *      *       0.0.0.0/0            0.0.0.0/0            state NEW tcp
+12     164 57676 DROP       0    --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 REJECT     0    --  *      *       0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited
+
+Chain OUTPUT (policy ACCEPT 30662 packets, 3984K bytes)
+num   pkts bytes target     prot opt in     out     source               destination      
+
+
+
 # 6/17/2024
 - https://www.youtube.com/watch?v=ESC2tk5Hkio
 
