@@ -14,3 +14,6 @@ Installing the tftp server
 # systemctl enable tftp.socket
 
 
+FirewallD
+- https://orcacore.com/manage-firewalld-fedora39-terminal/
+
