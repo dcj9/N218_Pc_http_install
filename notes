@@ -1,4 +1,14 @@
 Misc:
+# 6/20/2024
+- https://linux.die.net/man/5/dhcpd.conf  < -- dhcpd.conf manpage
+## Fedora Networking Information ##
+ - https://www.linuxtechi.com/configure-static-ip-address-on-fedora/
+## RedHat DHCPD ##
+      - https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/networking_guide/sec-dhcp-configuring-server#starting-stopping-server
+
+
+
+
 # 6/18/2024
 - https://apuntesderootblog.wordpress.com/2020/09/04/pxe-server-in-fedora-with-dnsmasq/
 - https://autellinux.wordpress.com/2016/06/09/why-pxe-client-is-failing-with-tftp-cannot-open-connection/
