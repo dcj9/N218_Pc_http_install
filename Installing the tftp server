@@ -1,11 +1,16 @@
 Installing the tftp server
 
 
-    # dnf install tftp-server
+# 6/20/2024
+- Ensure you shut off all SElinux
+    - https://tecadmin.net/how-to-disable-selinux-on-fedora/
+    - https://www.linuxquestions.org/questions/linux-networking-3/tftp-permission-denied-557578/
+
+# dnf install tftp-server
 
     Start and enable the tftp socket. systemd will automatically start the tftpd service when required.
 
-    # systemctl start tftp.socket
-    # systemctl enable tftp.socket
+# systemctl start tftp.socket
+# systemctl enable tftp.socket
 
 
