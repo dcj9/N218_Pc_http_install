@@ -1,3 +1,27 @@
+# 6/22/2024
+- https://linuxconfig.org/network-booting-with-linux-pxe
+- https://www.thegeekdiary.com/dhcp-configuration-file-etcdhcpdhcpd-conf-explained/
+- https://reintech.io/blog/configuring-pxe-boot-server-fedora-38
+########################################################
+ddns-update-style none;
+# Remember the semicolons at the end of each line!
+DHCPDARGS=eth1;
+default-lease-time 86400;
+max-lease-time 604800;
+authoritative;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+        range 192.168.1.10 192.168.1.30;
+        filename "pxelinux.0";
+        option subnet-mask 255.255.255.0;
+}
+# There is more to this file than we've shown, but what you have here is enough for PXE.
+
+########################################################
+
+
+
+# dnsmasq
 - https://docs.stg.fedoraproject.org/en-US/fedora-server/administration/dnsmasq/
 ### 
   This may be needed because of how I am trying to create the dhcpd service.
