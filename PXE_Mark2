@@ -30,5 +30,5 @@ systemctl status dhcpd:
 
 journalctl -xeu dhcpd --> errored.. I didn't restart after turning off the SE linux
 
-- Oh I wasnt reading. Its because I dont have a subnet defined. Okay im gonna copy over the dhcpd conf
+DHCP isnt working on PXE_Mark2 --> looking at the files from ClusterHTTPBoot (First PXE VM)
 
