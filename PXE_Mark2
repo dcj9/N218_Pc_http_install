@@ -31,4 +31,13 @@ systemctl status dhcpd:
 journalctl -xeu dhcpd --> errored.. I didn't restart after turning off the SE linux
 
 DHCP isnt working on PXE_Mark2 --> looking at the files from ClusterHTTPBoot (First PXE VM)
+        --> I think its working at thi time 6:40pm 6/24/2024
+
+Installed tftp server
+    started the socket
+    enabled the socket
+
+Installed Syslinux
+
+https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Network_based_Installations/
 
