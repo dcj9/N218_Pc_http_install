@@ -1,0 +1,34 @@
+# = Straight from documentation @ https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Network_based_Installations/
+
+sudo dnf update -y
+
+sudo dnf install dhcp-server
+
+sudo nano /etc/dhcp/dhcpd.conf
+
+
+#
+subnet 192.168.1.0 netmask 255.255.255.0 {
+authoritative;
+default-lease-time 600;
+max-lease-time 7200;
+ddns-update-style none;
+    option subnet-mask 255.255.255.0
+option domain-name-servers 192.168.1.1;
+option routers 192.168.1.1;
+
+}
+#
+
+sudo dnf install nano
+
+sudo nano /etc/sysconfig/syslinux  --> comment out enforcing for SElinux
+
+systemctl status dhcpd:
+
+    Failed: I believe this to be because there is no IP address associated with any of the interfaces.
+
+journalctl -xeu dhcpd --> errored.. I didn't restart after turning off the SE linux
+
+- Oh I wasnt reading. Its because I dont have a subnet defined. Okay im gonna copy over the dhcpd conf
+
