@@ -1,4 +1,17 @@
 Misc:
+# 6/24/2024
+- https://discussion.fedoraproject.org/t/slow-boot-initrd-dracut-initqueue-service/77354/7
+- https://docs.fedoraproject.org/en-US/quick-docs/debug-dracut-problems/
+Dracut-initqueue services:
+- https://www.man7.org/linux/man-pages/man8/dracut.8.html
+       
+       At boot time, the kernel unpacks that archive into RAM disk,
+       mounts and uses it as initial root file system. All finding of
+       the root device happens in this early userspace.
+
+       Initramfs images are also called "initrd".
+ 
+
 # 6/22/2024
 - https://docs.stg.fedoraproject.org/en-US/fedora-server/administration/virtual-routing-bridge/
 
