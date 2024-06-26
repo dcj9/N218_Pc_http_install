@@ -1,5 +1,25 @@
-# = Straight from documentation @ https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Network_based_Installations/
+# https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Network_based_Installations/
 
+
+
+###
+6/25/2024
+###
+- https://unix.stackexchange.com/questions/186302/fedora-network-install-via-pxe-boot
+
+firewall-cmd --add-serivce=tftp --perm
+firewall-cmd --add-service=dhcp
+
+
+
+
+
+
+
+
+
+
+###
 sudo dnf update -y
 
 sudo dnf install dhcp-server
