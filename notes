@@ -1,4 +1,11 @@
 Misc:
+# 6/26/2024
+- https://www.golinuxcloud.com/nmcli-command-examples-cheatsheet-centos-rhel/#26_De-activate_a_connection
+- https://docs.fedoraproject.org/en-US/quick-docs/network-manager-quick-reference/ <--- need a crashcourse in stupid nmcli commands... that interface is awesome tho.
+
+
+
+
 # 6/24/2024
 - https://discussion.fedoraproject.org/t/slow-boot-initrd-dracut-initqueue-service/77354/7
 - https://docs.fedoraproject.org/en-US/quick-docs/debug-dracut-problems/
