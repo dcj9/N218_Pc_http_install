@@ -11,7 +11,7 @@ firewall-cmd --add-serivce=tftp --perm
 firewall-cmd --add-service=dhcp
 
 
-
+- https://docs.fedoraproject.org/en-US/quick-docs/debug-dracut-problems/
 
 
 
